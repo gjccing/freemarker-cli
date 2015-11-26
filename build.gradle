@@ -1,0 +1,19 @@
+apply plugin: 'java' 
+apply plugin:'application'
+
+mainClassName = "cli.CliLoader"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+	compile 'org.glassfish:javax.json:1.0.4'
+	compile 'org.freemarker:freemarker:2.3.23'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cli.CliLoader'
+    }
+}
